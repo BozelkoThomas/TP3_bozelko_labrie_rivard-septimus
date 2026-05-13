@@ -12,3 +12,47 @@ carte[0].appendChild(form);
 
 // Informations pour la livraison
 
+const livraison = document.getElementById("livraison");
+
+const titreLivraison = document.createElement("h3");
+
+titreLivraison.textContent = "Informations pour la livraison";
+
+livraison.appendChild(titreLivraison);
+
+// Création du label
+
+const labelNom = document.createElement("label");
+
+// Texte du label
+labelNom.textContent = "Nom et prénom";
+
+// Création du input
+
+const inputNom = document.createElement("input");
+
+// Type du input = texte
+inputNom.setAttribute("type", "text");
+
+// Texte gris affiché dans le champ
+inputNom.setAttribute("placeholder", "Nom et prénom");
+
+// ID unique pour pouvoir récupérer le input plus tard
+
+inputNom.setAttribute("id", "nomLivraison");
+
+// On ajoute le label dans le div livraison
+
+livraison.appendChild(labelNom);
+
+// On ajoute le input dans le div livraison
+
+livraison.appendChild(inputNom);
+
+// On ajoute un saut de ligne
+
+
+
+
+
+
