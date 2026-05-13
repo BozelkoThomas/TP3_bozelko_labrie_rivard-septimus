@@ -87,7 +87,43 @@ livraison.appendChild(inputNom);
 
 // Facture --------------------------------------------------------------------------------------------------------------------------------------------
 
+// BASE
+const facture = document.getElementById("facture-header");
+const titreFacture = document.createElement("h2");
+titreFacture.textContent = "Pizzeria Freddy Fazbear"
+facture.appendChild(titreFacture);
 
+// Commande
+const commande = document.getElementById("facture-commande");
+const titreCommande = document.createElement("div");
+titreCommande.setAttribute("id", "commande-header");
+facture.appendChild(titreCommande);
 
+const pizza1Container = document.createElement("div");
+pizza1Container.setAttribute("id", "pizza1Container");
+facture.appendChild(pizza1Container);
 
+const titreCommandeNom = document.createElement("h3");
+titreCommandeNom.textContent = "Détails de la commande"
+titreCommande.appendChild(titreCommandeNom);
+
+const titreCommandeQt = document.createElement("h3");
+titreCommandeQt.textContent = "Quantité"
+titreCommande.appendChild(titreCommandeQt);
+
+const titreCommandePrix = document.createElement("h3");
+titreCommandePrix.textContent = "Prix"
+titreCommande.appendChild(titreCommandePrix);
+
+const pizza1 = document.createElement("p");
+pizza1.textContent = "Détails de la commande"
+pizza1Container.appendChild(pizza1);
+
+const qt1 = document.createElement("input");
+qt1.setAttribute("type", "number")
+pizza1Container.appendChild(qt1);
+
+const prix1 = document.createElement("input");
+prix1.setAttribute("type", "number")
+pizza1Container.appendChild(prix1);
 

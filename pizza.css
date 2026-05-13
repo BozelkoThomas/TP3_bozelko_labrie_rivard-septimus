@@ -1,3 +1,7 @@
 #zone-paiement {
     display: flex;
 }
+
+#commande-header {
+    display: flex;
+}
