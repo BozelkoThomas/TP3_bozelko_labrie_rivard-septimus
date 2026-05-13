@@ -254,47 +254,55 @@ pizza1.textContent = "Pizza Freddy"
 pizza1Container.appendChild(pizza1);
 
 const qt1 = document.createElement("input");
-qt1.setAttribute("type", "number")
+qt1.setAttribute("type", "number");
+qt1.setAttribute("id", "quantiteFreddy");
 pizza1Container.appendChild(qt1);
 
 const prix1 = document.createElement("input");
-prix1.setAttribute("type", "number")
+prix1.setAttribute("type", "number");
+prix1.setAttribute("id", "prixFreddy");
 pizza1Container.appendChild(prix1);
 // Bonnie
 const pizza2 = document.createElement("p");
-pizza2.textContent = "Pizza Bonnie"
+pizza2.textContent = "Pizza Bonnie";
 pizza2Container.appendChild(pizza2);
 
 const qt2 = document.createElement("input");
-qt2.setAttribute("type", "number")
+qt2.setAttribute("type", "number");
+qt2.setAttribute("id", "quantiteBonnie");
 pizza2Container.appendChild(qt2);
 
 const prix2 = document.createElement("input");
-prix2.setAttribute("type", "number")
+prix2.setAttribute("type", "number");
+prix2.setAttribute("id", "prixBonnie");
 pizza2Container.appendChild(prix2);
 // Chica
 const pizza3 = document.createElement("p");
-pizza3.textContent = "Pizza Chica"
+pizza3.textContent = "Pizza Chica";
 pizza3Container.appendChild(pizza3);
 
 const qt3 = document.createElement("input");
-qt3.setAttribute("type", "number")
+qt3.setAttribute("type", "number");
+qt3.setAttribute("id", "quantiteChica");
 pizza3Container.appendChild(qt3);
 
 const prix3 = document.createElement("input");
-prix3.setAttribute("type", "number")
+prix3.setAttribute("type", "number");
+prix3.setAttribute("id", "prixChica");
 pizza3Container.appendChild(prix3);
 // Foxy
 const pizza4 = document.createElement("p");
-pizza4.textContent = "Pizza Chica"
+pizza4.textContent = "Pizza Foxy";
 pizza4Container.appendChild(pizza4);
 
 const qt4 = document.createElement("input");
-qt4.setAttribute("type", "number")
+qt4.setAttribute("type", "number");
+qt4.setAttribute("id", "quantiteFoxy");
 pizza4Container.appendChild(qt4);
 
 const prix4 = document.createElement("input");
-prix4.setAttribute("type", "number")
+prix4.setAttribute("type", "number");
+prix4.setAttribute("id", "prixFoxy");
 pizza4Container.appendChild(prix4);
 
 
@@ -310,18 +318,22 @@ clientFacture.appendChild(clientContainer);
 
 const nomPrenom = document.createElement("input");
 nomPrenom.setAttribute("type", "text");
+nomPrenom.setAttribute("id", "factureNomPrenom");
 clientContainer.appendChild(nomPrenom);
 
 const telephone = document.createElement("input");
 telephone.setAttribute("type", "tel");
+telephone.setAttribute("id", "factureCell");
 clientContainer.appendChild(telephone);
 
 const courriel = document.createElement("input");
 courriel.setAttribute("type", "email");
+courriel.setAttribute("id", "factureEmail");
 clientContainer.appendChild(courriel);
 
 const adresse = document.createElement("input");
 adresse.setAttribute("type", "text");
+adresse.setAttribute("id", "factureAdresse");
 clientContainer.appendChild(adresse);
 
 
@@ -350,11 +362,12 @@ totalContainer.setAttribute("class", "prixContainer");
 prixFacture.appendChild(totalContainer);
 
 const prixTitre = document.createElement("p");
-prixTitre.textContent = "Prix des pizzas"
+prixTitre.textContent = "Prix des pizzas";
 prixContainer.appendChild(prixTitre);
 
 const prixPrix = document.createElement("input");
-prixPrix.setAttribute("type", "number")
+prixPrix.setAttribute("type", "number");
+prixPrix.setAttribute("id", "prixPizzas");
 prixContainer.appendChild(prixPrix);
 
 const tpsTitre = document.createElement("p");
@@ -362,23 +375,26 @@ tpsTitre.textContent = "TPS"
 tpsContainer.appendChild(tpsTitre);
 
 const tpsPrix = document.createElement("input");
-tpsPrix.setAttribute("type", "number")
+tpsPrix.setAttribute("type", "number");
+tpsPrix.setAttribute("id", "prixTps");
 tpsContainer.appendChild(tpsPrix);
 
 const tvqTitre = document.createElement("p");
-tvqTitre.textContent = "TVQ"
+tvqTitre.textContent = "TVQ";
 tvqContainer.appendChild(tvqTitre);
 
 const tvqPrix = document.createElement("input");
-tvqPrix.setAttribute("type", "number")
+tvqPrix.setAttribute("type", "number");
+tvqPrix.setAttribute("id", "prixTvq");
 tvqContainer.appendChild(tvqPrix);
 
 const totalTitre = document.createElement("p");
-totalTitre.textContent = "Prix total"
+totalTitre.textContent = "Prix total";
 totalContainer.appendChild(totalTitre);
 
 const totalPrix = document.createElement("input");
-totalPrix.setAttribute("type", "number")
+totalPrix.setAttribute("type", "number");
+totalPrix.setAttribute("id", "prixTotal");
 totalContainer.appendChild(totalPrix);
 
 
