@@ -18,9 +18,6 @@ const titrePaiement = document.createElement("h2");
 titrePaiement.textContent = "Mode de paiement"
 paiement.appendChild(titrePaiement);
 
-const checkboxPaiement = document.createElement("input");
-checkboxPaiement.setAttribute("type", "checkbox");
-paiement.appendChild(checkboxPaiement);
 
 
 
