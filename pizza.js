@@ -1,12 +1,16 @@
 // Cartes
 
-const carte = document.getElementsByClassName("pizzas__cards");
+const pizza1 = document.getElementsById("pizza1");
+const pizza2 = document.getElementsById("pizza1");
+const pizza3 = document.getElementsById("pizza1");
+const pizza4 = document.getElementsById("pizza1");
 const form = document.createElement("form");
 const titre = document.createElement("h2");
-
+ 
 titre.textContent = "La pizza de Freddy";
 form.appendChild(titre);
 carte[0].appendChild(form);
+ 
 
 // Mode de paiement et informations sur le client
 
