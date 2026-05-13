@@ -2,6 +2,13 @@
     display: flex;
 }
 
-#commande-header {
+#commande-header, #pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container{
     display: flex;
+    align-items: center;
+}
+
+#clientContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
