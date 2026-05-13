@@ -85,12 +85,14 @@ inputNom.setAttribute("placeholder", "Nom et prénom");
 inputNom.setAttribute("id", "nomLivraison");
 livraison.appendChild(inputNom);
 
-// Facture --------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Facture (cachée)--------------------------------------------------------------------------------------------------------------------------------------------
 
 // BASE
 const facture = document.getElementById("facture-header");
 const titreFacture = document.createElement("h2");
-titreFacture.textContent = "Pizzeria Freddy Fazbear"
+titreFacture.textContent = "Pizzeria Freddy Fazbear";
 facture.appendChild(titreFacture);
 
 
@@ -180,7 +182,7 @@ pizza4Container.appendChild(prix4);
 // Client
 const client = document.getElementById("facture-client");
 const titreClient = document.createElement("h3");
-titreClient.textContent = "Informations sur le client"
+titreClient.textContent = "Informations sur le client";
 facture.appendChild(titreClient);
 
 const clientContainer = document.createElement("div");
@@ -202,3 +204,19 @@ clientContainer.appendChild(courriel);
 const adresse = document.createElement("input");
 adresse.setAttribute("type", "text");
 clientContainer.appendChild(adresse);
+
+
+// Prix
+const tps = 0.05;
+const tvq = 0.09975;
+const prix = document.getElementById("facture-prix");
+const titrePrix = document.createElement("h3");
+titrePrix.textContent = "Paiement";
+facture.appendChild(titrePrix);
+
+
+// Footer
+const footer = document.getElementById("facture-footer");
+const titreFooter = document.createElement("h2");
+titreFooter.textContent = "Merci de nous avoir choisi!";
+facture.appendChild(titreFooter);
