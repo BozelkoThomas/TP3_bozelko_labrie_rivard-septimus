@@ -37,6 +37,7 @@ checkboxContainer.appendChild(paiementChoix3);
 const paiementCheckboxes1 = document.createElement("input");
 paiementCheckboxes1.setAttribute("type", "checkbox");
 paiementCheckboxes1.setAttribute("name", "checkbox");
+paiementCheckboxes1.setAttribute("id", "paiement1");
 paiementChoix1.appendChild(paiementCheckboxes1);
 
 const checkboxTitle1 = document.createElement("label");
@@ -48,6 +49,7 @@ paiementChoix1.appendChild(checkboxTitle1);
 const paiementCheckboxes2 = document.createElement("input");
 paiementCheckboxes2.setAttribute("type", "checkbox");
 paiementCheckboxes2.setAttribute("name", "checkbox");
+paiementCheckboxes1.setAttribute("id", "paiement2");
 paiementChoix2.appendChild(paiementCheckboxes2);
 
 const checkboxTitle2 = document.createElement("label");
@@ -59,6 +61,7 @@ paiementChoix2.appendChild(checkboxTitle2);
 const paiementCheckboxes3 = document.createElement("input");
 paiementCheckboxes3.setAttribute("type", "checkbox");
 paiementCheckboxes3.setAttribute("name", "checkbox");
+paiementCheckboxes1.setAttribute("id", "paiement3");
 paiementChoix3.appendChild(paiementCheckboxes3);
 
 const checkboxTitle3 = document.createElement("label");
@@ -85,14 +88,13 @@ const titreLivraison = document.createElement("h2");
 titreLivraison.textContent = "Informations pour la livraison";
 livraison.appendChild(titreLivraison);
 
-const labelNom = document.createElement("label");
-labelNom.textContent = "Nom et prénom";
 const inputNom = document.createElement("input");
 inputNom.setAttribute("type", "text");
+inputNom.textContent = "Nom et prénom";
 
 inputNom.setAttribute("placeholder", "Nom et prénom");
 inputNom.setAttribute("id", "nomLivraison");
-livraison.appendChild(labelNom);
+livraison.appendChild(inputNom);
 
 
 
