@@ -21,7 +21,7 @@ body {
     display: flex;
 }
 
-#commande-header, #pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container{
+#commande-header, #pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container, .prixContainer{
     display: flex;
     align-items: center;
 } 

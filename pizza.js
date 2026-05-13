@@ -333,6 +333,54 @@ const titrePrix = document.createElement("h3");
 titrePrix.textContent = "Paiement";
 prixFacture.appendChild(titrePrix);
 
+const prixContainer = document.createElement("div");
+prixContainer.setAttribute("class", "prixContainer");
+prixFacture.appendChild(prixContainer);
+
+const tpsContainer = document.createElement("div");
+tpsContainer.setAttribute("class", "prixContainer");
+prixFacture.appendChild(tpsContainer);
+
+const tvqContainer = document.createElement("div");
+tvqContainer.setAttribute("class", "prixContainer");
+prixFacture.appendChild(tvqContainer);
+
+const totalContainer = document.createElement("div");
+totalContainer.setAttribute("class", "prixContainer");
+prixFacture.appendChild(totalContainer);
+
+const prixTitre = document.createElement("p");
+prixTitre.textContent = "Prix des pizzas"
+prixContainer.appendChild(prixTitre);
+
+const prixPrix = document.createElement("input");
+prixPrix.setAttribute("type", "number")
+prixContainer.appendChild(prixPrix);
+
+const tpsTitre = document.createElement("p");
+tpsTitre.textContent = "TPS"
+tpsContainer.appendChild(tpsTitre);
+
+const tpsPrix = document.createElement("input");
+tpsPrix.setAttribute("type", "number")
+tpsContainer.appendChild(tpsPrix);
+
+const tvqTitre = document.createElement("p");
+tvqTitre.textContent = "TVQ"
+tvqContainer.appendChild(tvqTitre);
+
+const tvqPrix = document.createElement("input");
+tvqPrix.setAttribute("type", "number")
+tvqContainer.appendChild(tvqPrix);
+
+const totalTitre = document.createElement("p");
+totalTitre.textContent = "Prix total"
+totalContainer.appendChild(totalTitre);
+
+const totalPrix = document.createElement("input");
+totalPrix.setAttribute("type", "number")
+totalContainer.appendChild(totalPrix);
+
 
 // Footer
 const footer = document.getElementById("facture-footer");
