@@ -73,9 +73,9 @@ paiementChoix3.appendChild(checkboxTitle3);
 const client = document.getElementById("client");
 
 // TITRE
-const titreClient = document.createElement("h3");
-titreClient.textContent = "Informations sur le client";
-client.appendChild(titreClient);
+// const titreClient = document.createElement("h3");
+// titreClient.textContent = "Informations sur le client";
+// client.appendChild(titreClient);
 
 
 // NOM
@@ -294,7 +294,7 @@ pizza4Container.appendChild(prix4);
 
 
 // Client
-const client = document.getElementById("facture-client");
+const clientFacture = document.getElementById("facture-client");
 const titreClient = document.createElement("h3");
 titreClient.textContent = "Informations sur le client";
 facture.appendChild(titreClient);
