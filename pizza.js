@@ -214,23 +214,27 @@ facture.appendChild(titreFacture);
 const commande = document.getElementById("facture-commande");
 const titreCommande = document.createElement("div");
 titreCommande.setAttribute("id", "commande-header");
-facture.appendChild(titreCommande);
+commande.appendChild(titreCommande);
+
+const pizzasContainer = document.createElement("div");
+pizzasContainer.setAttribute("id", "pizzasContainer");
+commande.appendChild(pizzasContainer);
 
 const pizza1Container = document.createElement("div");
 pizza1Container.setAttribute("id", "pizza1Container");
-facture.appendChild(pizza1Container);
+pizzasContainer.appendChild(pizza1Container);
 
 const pizza2Container = document.createElement("div");
 pizza2Container.setAttribute("id", "pizza2Container");
-facture.appendChild(pizza2Container);
+pizzasContainer.appendChild(pizza2Container);
 
 const pizza3Container = document.createElement("div");
 pizza3Container.setAttribute("id", "pizza3Container");
-facture.appendChild(pizza3Container);
+pizzasContainer.appendChild(pizza3Container);
 
 const pizza4Container = document.createElement("div");
 pizza4Container.setAttribute("id", "pizza4Container");
-facture.appendChild(pizza4Container);
+pizzasContainer.appendChild(pizza4Container);
 
 const titreCommandeNom = document.createElement("h3");
 titreCommandeNom.textContent = "Détails de la commande"
@@ -297,11 +301,11 @@ pizza4Container.appendChild(prix4);
 const clientFacture = document.getElementById("facture-client");
 const titreClient = document.createElement("h3");
 titreClient.textContent = "Informations sur le client";
-facture.appendChild(titreClient);
+clientFacture.appendChild(titreClient);
 
 const clientContainer = document.createElement("div");
 clientContainer.setAttribute("id", "clientContainer");
-facture.appendChild(clientContainer);
+clientFacture.appendChild(clientContainer);
 
 const nomPrenom = document.createElement("input");
 nomPrenom.setAttribute("type", "text");
@@ -323,14 +327,14 @@ clientContainer.appendChild(adresse);
 // Prix
 const tps = 0.05;
 const tvq = 0.09975;
-const prix = document.getElementById("facture-prix");
+const prixFacture = document.getElementById("facture-paiement");
 const titrePrix = document.createElement("h3");
 titrePrix.textContent = "Paiement";
-facture.appendChild(titrePrix);
+prixFacture.appendChild(titrePrix);
 
 
 // Footer
 const footer = document.getElementById("facture-footer");
 const titreFooter = document.createElement("h2");
 titreFooter.textContent = "Merci de nous avoir choisi!";
-facture.appendChild(titreFooter);
+footer.appendChild(titreFooter);
