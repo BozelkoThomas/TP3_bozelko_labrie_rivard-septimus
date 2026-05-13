@@ -73,9 +73,10 @@ paiementChoix3.appendChild(checkboxTitle3);
 const client = document.getElementById("client");
 
 // TITRE
-// const titreClient = document.createElement("h3");
-// titreClient.textContent = "Informations sur le client";
-// client.appendChild(titreClient);
+
+const clientTitre = document.createElement("h2");
+clientTitre.textContent = "Mode de paiement"
+client.appendChild(clientTitre);
 
 
 // NOM
@@ -148,7 +149,7 @@ client.appendChild(document.createElement("br"));
 const livraison = document.getElementById("livraison");
 
 // TITRE
-const titreLivraison = document.createElement("h3");
+const titreLivraison = document.createElement("h2");
 titreLivraison.textContent = "Informations pour la livraison";
 
 livraison.appendChild(titreLivraison);
