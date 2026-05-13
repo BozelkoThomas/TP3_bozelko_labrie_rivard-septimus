@@ -70,17 +70,6 @@ checkboxTitle3.textContent = "Espèces (à la porte)";
 paiementChoix3.appendChild(checkboxTitle3);
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Informations sur le client et pour la livraison ----------------------------------------------------------------------------------------------
 
 const livraison = document.getElementById("livraison");
@@ -96,7 +85,7 @@ inputNom.setAttribute("placeholder", "Nom et prénom");
 inputNom.setAttribute("id", "nomLivraison");
 livraison.appendChild(inputNom);
 
-
+// Facture --------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
