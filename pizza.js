@@ -69,23 +69,137 @@ checkboxTitle3.setAttribute("for", "checkbox")
 checkboxTitle3.textContent = "Espèces (à la porte)";
 paiementChoix3.appendChild(checkboxTitle3);
 
+// Informations sur le client ----------------------------------------------------------------------------------------------
+const client = document.getElementById("client");
 
-// Informations sur le client et pour la livraison ----------------------------------------------------------------------------------------------
+// TITRE
+const titreClient = document.createElement("h3");
+titreClient.textContent = "Informations sur le client";
+client.appendChild(titreClient);
 
+
+// NOM
+
+const labelNomClient = document.createElement("label");
+labelNomClient.textContent = "Nom";
+
+const inputNomClient = document.createElement("input");
+inputNomClient.setAttribute("type", "text");
+inputNomClient.setAttribute("placeholder", "Nom");
+inputNomClient.setAttribute("id", "nomClient");
+
+client.appendChild(labelNomClient);
+client.appendChild(document.createElement("br"));
+
+client.appendChild(inputNomClient);
+client.appendChild(document.createElement("br"));
+
+// PRÉNOM
+
+const labelPrenomClient = document.createElement("label");
+labelPrenomClient.textContent = "Prénom";
+
+const inputPrenomClient = document.createElement("input");
+inputPrenomClient.setAttribute("type", "text");
+inputPrenomClient.setAttribute("placeholder", "Prénom");
+inputPrenomClient.setAttribute("id", "prenomClient");
+
+client.appendChild(labelPrenomClient);
+client.appendChild(document.createElement("br"));
+
+client.appendChild(inputPrenomClient);
+client.appendChild(document.createElement("br"));
+
+
+// TÉLÉPHONE
+
+const labelTelephoneClient = document.createElement("label");
+labelTelephoneClient.textContent = "Téléphone";
+
+const inputTelephoneClient = document.createElement("input");
+inputTelephoneClient.setAttribute("type", "tel");
+inputTelephoneClient.setAttribute("placeholder", "Téléphone");
+inputTelephoneClient.setAttribute("id", "telephoneClient");
+
+client.appendChild(labelTelephoneClient);
+client.appendChild(document.createElement("br"));
+
+client.appendChild(inputTelephoneClient);
+client.appendChild(document.createElement("br"));
+
+// COURRIEL
+
+const labelCourrielClient = document.createElement("label");
+labelCourrielClient.textContent = "Adresse courriel";
+
+const inputCourrielClient = document.createElement("input");
+inputCourrielClient.setAttribute("type", "email");
+inputCourrielClient.setAttribute("placeholder", "Adresse courriel");
+inputCourrielClient.setAttribute("id", "courrielClient");
+
+client.appendChild(labelCourrielClient);
+client.appendChild(document.createElement("br"));
+
+client.appendChild(inputCourrielClient);
+client.appendChild(document.createElement("br"));
+
+
+// Sélection du div livraison
 const livraison = document.getElementById("livraison");
-const titreLivraison = document.createElement("h2");
+
+// TITRE
+const titreLivraison = document.createElement("h3");
 titreLivraison.textContent = "Informations pour la livraison";
+
 livraison.appendChild(titreLivraison);
 
-const inputNom = document.createElement("input");
-inputNom.setAttribute("type", "text");
-inputNom.textContent = "Nom et prénom";
+// NOM ET PRÉNOM
 
-inputNom.setAttribute("placeholder", "Nom et prénom");
-inputNom.setAttribute("id", "nomLivraison");
-livraison.appendChild(inputNom);
+const labelNomLivraison = document.createElement("label");
+labelNomLivraison.textContent = "Nom et prénom";
 
+const inputNomLivraison = document.createElement("input");
+inputNomLivraison.setAttribute("type", "text");
+inputNomLivraison.setAttribute("placeholder", "Nom et prénom");
+inputNomLivraison.setAttribute("id", "nomLivraison");
 
+livraison.appendChild(labelNomLivraison);
+livraison.appendChild(document.createElement("br"));
+
+livraison.appendChild(inputNomLivraison);
+livraison.appendChild(document.createElement("br"));
+
+// TÉLÉPHONE
+
+const labelTelLivraison = document.createElement("label");
+labelTelLivraison.textContent = "Téléphone";
+
+const inputTelLivraison = document.createElement("input");
+inputTelLivraison.setAttribute("type", "tel");
+inputTelLivraison.setAttribute("placeholder", "Numéro de téléphone");
+inputTelLivraison.setAttribute("id", "telephoneLivraison");
+
+livraison.appendChild(labelTelLivraison);
+livraison.appendChild(document.createElement("br"));
+
+livraison.appendChild(inputTelLivraison);
+livraison.appendChild(document.createElement("br"));
+
+// ADRESSE
+
+const labelAdresseLivraison = document.createElement("label");
+labelAdresseLivraison.textContent = "Adresse";
+
+const inputAdresseLivraison = document.createElement("input");
+inputAdresseLivraison.setAttribute("type", "text");
+inputAdresseLivraison.setAttribute("placeholder", "Adresse de livraison");
+inputAdresseLivraison.setAttribute("id", "adresseLivraison");
+
+livraison.appendChild(labelAdresseLivraison);
+livraison.appendChild(document.createElement("br"));
+
+livraison.appendChild(inputAdresseLivraison);
+livraison.appendChild(document.createElement("br"));
 
 // Facture (cachée)--------------------------------------------------------------------------------------------------------------------------------------------
 
