@@ -11,7 +11,6 @@ titre.textContent = "La pizza de Freddy";
 form.appendChild(titre);
 carte[0].appendChild(form);
  
-
 // Mode de paiement et informations sur le client
 
 const paiement = document.getElementById("paiement");
