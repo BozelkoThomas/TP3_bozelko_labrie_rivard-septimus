@@ -204,10 +204,10 @@ livraison.appendChild(document.createElement("br"));
 // Facture (cachée)--------------------------------------------------------------------------------------------------------------------------------------------
 
 // BASE
-const facture = document.getElementById("facture-header");
+const factureHeader = document.getElementById("facture-header");
 const titreFacture = document.createElement("h2");
 titreFacture.textContent = "Pizzeria Freddy Fazbear";
-facture.appendChild(titreFacture);
+factureHeader.appendChild(titreFacture);
 
 
 // Commande
