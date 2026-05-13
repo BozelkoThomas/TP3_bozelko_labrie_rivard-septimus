@@ -1,3 +1,16 @@
+:root {
+    --color-main: #1E1027;
+    --color-secondary: #493552;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Kumbh Sans";
+    background-color: var(--color-main);
+    color: white;
+}
+
 #zone-paiement {
     display: flex;
 }
@@ -11,4 +24,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+#facture {
+    background-color: var(--color-secondary);
+    height: 100vh;
 }
