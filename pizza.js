@@ -10,46 +10,64 @@ carte[0].appendChild(form);
 
 // Mode de paiement et informations sur le client
 
+const paiement = document.getElementById("paiement");
+const titrePaiement = document.createElement("h2");
+titrePaiement.textContent = "Mode de paiement"
+paiement.appendChild(titrePaiement);
+
+const checkboxPaiement = document.createElement("input");
+checkboxPaiement.setAttribute("type", "checkbox");
+paiement.appendChild(checkboxPaiement);
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Informations pour la livraison
 
-const livraison = document.getElementById("livraison");
+// const livraison = document.getElementById("livraison");
+// const titreLivraison = document.createElement("h3");
+// titreLivraison.textContent = "Informations pour la livraison";
+// livraison.appendChild(titreLivraison);
 
-const titreLivraison = document.createElement("h3");
+// // Création du label
 
-titreLivraison.textContent = "Informations pour la livraison";
+// const labelNom = document.createElement("label");
 
-livraison.appendChild(titreLivraison);
+// // Texte du label
+// labelNom.textContent = "Nom et prénom";
 
-// Création du label
+// // Création du input
 
-const labelNom = document.createElement("label");
+// const inputNom = document.createElement("input");
 
-// Texte du label
-labelNom.textContent = "Nom et prénom";
+// // Type du input = texte
+// inputNom.setAttribute("type", "text");
 
-// Création du input
+// // Texte gris affiché dans le champ
+// inputNom.setAttribute("placeholder", "Nom et prénom");
 
-const inputNom = document.createElement("input");
+// // ID unique pour pouvoir récupérer le input plus tard
 
-// Type du input = texte
-inputNom.setAttribute("type", "text");
+// inputNom.setAttribute("id", "nomLivraison");
 
-// Texte gris affiché dans le champ
-inputNom.setAttribute("placeholder", "Nom et prénom");
+// // On ajoute le label dans le div livraison
 
-// ID unique pour pouvoir récupérer le input plus tard
+// livraison.appendChild(labelNom);
 
-inputNom.setAttribute("id", "nomLivraison");
+// // On ajoute le input dans le div livraison
 
-// On ajoute le label dans le div livraison
+// livraison.appendChild(inputNom);
 
-livraison.appendChild(labelNom);
-
-// On ajoute le input dans le div livraison
-
-livraison.appendChild(inputNom);
-
-// On ajoute un saut de ligne
+// // On ajoute un saut de ligne
 
 
 
