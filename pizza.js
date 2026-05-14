@@ -57,7 +57,7 @@ while (i < nomsPizzas.length) {
 
     const btnMoinsPizza = document.createElement("button");
     btnMoinsPizza.setAttribute("id", "btnMoinsPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) +);
+    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) + "()");
     btnMoinsPizza.textContent = "-";
     conteneurQtyPizza.appendChild(btnMoinsPizza);
 
