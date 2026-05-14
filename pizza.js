@@ -410,6 +410,14 @@ totalPrix.setAttribute("type", "number");
 totalPrix.setAttribute("id", "prixTotal");
 totalContainer.appendChild(totalPrix);
 
+// Boutton
+const zoneButton = document.getElementById("commander");
+const button = document.createElement("button");
+button.setAttribute("type", "button");
+button.setAttribute("id", "button");
+button.textContent = "Commander";
+zoneButton.appendChild(button);
+
 
 // Footer
 const footer = document.getElementById("facture-footer");
