@@ -15,16 +15,32 @@ body {
     font-family: "Kumbh Sans";
     background-color: var(--color-main);
     color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
 }
 
 #zone-paiement {
     display: flex;
 }
 
-#commande-header, #pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container, .prixContainer{
+#commande-header, #pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container, .prixContainer, #pizzas{
     display: flex;
     align-items: center;
 } 
+
+#pizzas, #zone-paiement {
+    gap: 20px;
+}
+
+#paiement, #client, #livraison {
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 #clientContainer, #pizzasContainer {
     display: flex;
@@ -33,6 +49,9 @@ body {
 }
 
 #facture {
+    position: absolute;
     background-color: var(--color-secondary);
     height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
 }

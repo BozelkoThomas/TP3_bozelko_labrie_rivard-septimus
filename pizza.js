@@ -125,25 +125,19 @@ const client = document.getElementById("client");
 // TITRE
 
 const clientTitre = document.createElement("h2");
-clientTitre.textContent = "Mode de paiement"
+clientTitre.textContent = "Informations sur le client"
 client.appendChild(clientTitre);
 
 
 // NOM
-
-const labelNomClient = document.createElement("label");
-labelNomClient.textContent = "Nom";
 
 const inputNomClient = document.createElement("input");
 inputNomClient.setAttribute("type", "text");
 inputNomClient.setAttribute("placeholder", "Nom");
 inputNomClient.setAttribute("id", "nomClient");
 
-client.appendChild(labelNomClient);
-client.appendChild(document.createElement("br"));
 
 client.appendChild(inputNomClient);
-client.appendChild(document.createElement("br"));
 
 // PRÉNOM
 
@@ -155,41 +149,24 @@ inputPrenomClient.setAttribute("type", "text");
 inputPrenomClient.setAttribute("placeholder", "Prénom");
 inputPrenomClient.setAttribute("id", "prenomClient");
 
-client.appendChild(labelPrenomClient);
-client.appendChild(document.createElement("br"));
-
 client.appendChild(inputPrenomClient);
-client.appendChild(document.createElement("br"));
 
 
 // TÉLÉPHONE
-
-const labelTelephoneClient = document.createElement("label");
-labelTelephoneClient.textContent = "Téléphone";
 
 const inputTelephoneClient = document.createElement("input");
 inputTelephoneClient.setAttribute("type", "tel");
 inputTelephoneClient.setAttribute("placeholder", "Téléphone");
 inputTelephoneClient.setAttribute("id", "telephoneClient");
 
-client.appendChild(labelTelephoneClient);
-client.appendChild(document.createElement("br"));
-
 client.appendChild(inputTelephoneClient);
-client.appendChild(document.createElement("br"));
 
 // COURRIEL
-
-const labelCourrielClient = document.createElement("label");
-labelCourrielClient.textContent = "Adresse courriel";
 
 const inputCourrielClient = document.createElement("input");
 inputCourrielClient.setAttribute("type", "email");
 inputCourrielClient.setAttribute("placeholder", "Adresse courriel");
 inputCourrielClient.setAttribute("id", "courrielClient");
-
-client.appendChild(labelCourrielClient);
-client.appendChild(document.createElement("br"));
 
 client.appendChild(inputCourrielClient);
 client.appendChild(document.createElement("br"));
@@ -206,51 +183,30 @@ livraison.appendChild(titreLivraison);
 
 // NOM ET PRÉNOM
 
-const labelNomLivraison = document.createElement("label");
-labelNomLivraison.textContent = "Nom et prénom";
-
 const inputNomLivraison = document.createElement("input");
 inputNomLivraison.setAttribute("type", "text");
 inputNomLivraison.setAttribute("placeholder", "Nom et prénom");
 inputNomLivraison.setAttribute("id", "nomLivraison");
 
-livraison.appendChild(labelNomLivraison);
-livraison.appendChild(document.createElement("br"));
-
 livraison.appendChild(inputNomLivraison);
-livraison.appendChild(document.createElement("br"));
 
 // TÉLÉPHONE
-
-const labelTelLivraison = document.createElement("label");
-labelTelLivraison.textContent = "Téléphone";
 
 const inputTelLivraison = document.createElement("input");
 inputTelLivraison.setAttribute("type", "tel");
 inputTelLivraison.setAttribute("placeholder", "Numéro de téléphone");
 inputTelLivraison.setAttribute("id", "telephoneLivraison");
 
-livraison.appendChild(labelTelLivraison);
-livraison.appendChild(document.createElement("br"));
-
 livraison.appendChild(inputTelLivraison);
-livraison.appendChild(document.createElement("br"));
 
 // ADRESSE
-
-const labelAdresseLivraison = document.createElement("label");
-labelAdresseLivraison.textContent = "Adresse";
 
 const inputAdresseLivraison = document.createElement("input");
 inputAdresseLivraison.setAttribute("type", "text");
 inputAdresseLivraison.setAttribute("placeholder", "Adresse de livraison");
 inputAdresseLivraison.setAttribute("id", "adresseLivraison");
 
-livraison.appendChild(labelAdresseLivraison);
-livraison.appendChild(document.createElement("br"));
-
 livraison.appendChild(inputAdresseLivraison);
-livraison.appendChild(document.createElement("br"));
 
 // Facture (cachée)--------------------------------------------------------------------------------------------------------------------------------------------
 
