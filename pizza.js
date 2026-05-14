@@ -61,6 +61,7 @@ while (i < nomsPizzas.length) {
 
     const qtyPizza = document.createElement("input");
     qtyPizza.setAttribute("id", "qtyPizza" + (i + 1));
+    qtyPizza.setAttribute("class", "qtyPizza");
     qtyPizza.setAttribute("type", "number" + (i + 1));
     qtyPizza.setAttribute("value", 0);
     conteneurQtyPizza.appendChild(qtyPizza);
