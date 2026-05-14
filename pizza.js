@@ -8,12 +8,8 @@ header.appendChild(mainTitle);
 // Pizzas
 const nomsPizzas = ["Freddy", "Bonnie", "Chica", "Foxy"];
 const pizzas = [document.getElementById("pizza1"), document.getElementById("pizza2"), document.getElementById("pizza3"), document.getElementById("pizza4")];
-const choixPizzas = [
-    ["Fromage", "Tomates", "Olives"],
-    ["Fromage", "Tomates", "Olives"],
-    ["Fromage", "Tomates", "Olives"],
-    ["Fromage", "Tomates", "Olives"]
-]
+const choixPizzas = ["Fromage", "Tomates", "Olives"];
+
 let qtyPizza1 = 0;
 let qtyPizza2 = 0;
 let qtyPizza3 = 0;
@@ -34,7 +30,7 @@ while (i < nomsPizzas.length) {
     const formPizza = document.createElement("div");
     pizzas[i].appendChild(formPizza);
 
-    while (n < (choixPizzas.length - 1)) {
+    while (n < (choixPizzas.length)) {
         const conteneurChoixPizza = document.createElement("div");
         conteneurChoixPizza.setAttribute("class", "conteneurChoixPizza")
         formPizza.appendChild(conteneurChoixPizza);
@@ -47,13 +43,14 @@ while (i < nomsPizzas.length) {
 
         const descChoixPizza = document.createElement("label");
         descChoixPizza.setAttribute("for", "chk" + (n + 1) + "Pizza" + (i + 1));
-        descChoixPizza.textContent = choixPizzas[i][n];
+        descChoixPizza.textContent = choixPizzas[n];
         conteneurChoixPizza.appendChild(descChoixPizza); 
 
         n++;
     }
 
     const conteneurQtyPizza = document.createElement("div");
+    conteneurQtyPizza.setAttribute("id", "qtyPizza" + (i + 1));
     formPizza.appendChild(conteneurQtyPizza);
 
     const btnMoinsPizza = document.createElement("button");
