@@ -59,7 +59,7 @@ while (i < nomsPizzas.length) {
     btnMoinsPizza.textContent = "-";
     conteneurQtyPizza.appendChild(btnMoinsPizza);
 
-    const qtyPizza = document.createElement("input");
+    const qtyPizza = document.createElement("p");
     qtyPizza.setAttribute("id", "qtyPizza" + (i + 1));
     qtyPizza.setAttribute("class", "qtyPizza");
     qtyPizza.setAttribute("type", "number" + (i + 1));
