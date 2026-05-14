@@ -1,17 +1,67 @@
-// Cartes
+// Pizzas
+const nomsPizzas = ["Freddy", "Bonnie", "Chica", "Foxy"];
+const pizzas = [document.getElementById("pizza1"), document.getElementById("pizza2"), document.getElementById("pizza3"), document.getElementById("pizza4")];
+const choixPizzas = [
+    ["Choix 1a", "Choix 2a", "Choix 3a"],
+    ["Choix 1b", "Choix 2b", "Choix 3b"],
+    ["Choix 1c", "Choix 2c", "Choix 3c"],
+    ["Choix 1d", "Choix 2d", "Choix 3d"]
+]
 
-// const pizza1 = document.getElementsById("pizza1");
-// const pizza2 = document.getElementsById("pizza1");
-// const pizza3 = document.getElementsById("pizza1");
-// const pizza4 = document.getElementsById("pizza1");
-// const form = document.createElement("form");
-// const titre = document.createElement("h2");
- 
-// titre.textContent = "La pizza de Freddy";
-// form.appendChild(titre);
-// carte[0].appendChild(form);
- 
+let i = 0;
+let n = 0;
 
+while (i < nomsPizzas.length) {
+    const imagePizza = document.createElement("div");
+    imagePizza.setAttribute("id", "imagePizza" + (i + 1));
+    pizzas[i].appendChild(imagePizza);
+
+    const titrePizza = document.createElement("h2");
+    titrePizza.textContent = "La pizza de " + nomsPizzas[i];
+    pizzas[i].appendChild(titrePizza);
+
+    const formPizza = document.createElement("form");
+    pizzas[i].appendChild(formPizza);
+
+    while (n < (choixPizzas.length - 1)) {
+        const conteneurChoixPizza = document.createElement("div");
+        formPizza.appendChild(conteneurChoixPizza);
+
+        const chkPizza = document.createElement("input");
+        chkPizza.setAttribute("type", "checkbox");
+        chkPizza.setAttribute("name", "checkbox");
+        chkPizza.setAttribute("id", "chk" + (n + 1) + "Pizza" + (i + 1));
+        conteneurChoixPizza.appendChild(chkPizza);
+
+        const descChoixPizza = document.createElement("label");
+        descChoixPizza.setAttribute("for", "chk" + (n + 1) + "Pizza" + (i + 1));
+        descChoixPizza.textContent = choixPizzas[i][n];
+        conteneurChoixPizza.appendChild(descChoixPizza); 
+
+        n++;
+    }
+
+    const conteneurQtyPizza = document.createElement("div");
+    formPizza.appendChild(conteneurQtyPizza);
+
+    const btnMoinsPizza = document.createElement("button");
+    btnMoinsPizza.setAttribute("id", "btnMoinsPizza" + (i + 1));
+    btnMoinsPizza.textContent = "-";
+    conteneurQtyPizza.appendChild(btnMoinsPizza);
+
+    const qtyPizza = document.createElement("input");
+    qtyPizza.setAttribute("id", "qtyPizza" + (i + 1));
+    qtyPizza.setAttribute("value", "0");
+    conteneurQtyPizza.appendChild(qtyPizza);
+
+    const btnPlusPizza = document.createElement("button");
+    btnPlusPizza.setAttribute("id", "btnPlusPizza" + (i + 1));
+    btnPlusPizza.textContent = "+";
+    conteneurQtyPizza.appendChild(btnPlusPizza);
+
+    i++;
+    n = 0;
+}
 
 // Mode de paiement --------------------------------------------------------------------------------------------------------------------------------x
 
@@ -35,7 +85,7 @@ checkboxContainer.appendChild(paiementChoix3);
 
 // Choix 1
 const paiementCheckboxes1 = document.createElement("input");
-paiementCheckboxes1.setAttribute("type", "checkbox");
+paiementCheckboxes1.setAttribute("type", "radio");
 paiementCheckboxes1.setAttribute("name", "checkbox");
 paiementCheckboxes1.setAttribute("id", "paiement1");
 paiementChoix1.appendChild(paiementCheckboxes1);
@@ -47,9 +97,9 @@ paiementChoix1.appendChild(checkboxTitle1);
 
 // Choix 2
 const paiementCheckboxes2 = document.createElement("input");
-paiementCheckboxes2.setAttribute("type", "checkbox");
+paiementCheckboxes2.setAttribute("type", "radio");
 paiementCheckboxes2.setAttribute("name", "checkbox");
-paiementCheckboxes1.setAttribute("id", "paiement2");
+paiementCheckboxes2.setAttribute("id", "paiement2");
 paiementChoix2.appendChild(paiementCheckboxes2);
 
 const checkboxTitle2 = document.createElement("label");
@@ -59,9 +109,9 @@ paiementChoix2.appendChild(checkboxTitle2);
 
 // Choix 3
 const paiementCheckboxes3 = document.createElement("input");
-paiementCheckboxes3.setAttribute("type", "checkbox");
+paiementCheckboxes3.setAttribute("type", "radio");
 paiementCheckboxes3.setAttribute("name", "checkbox");
-paiementCheckboxes1.setAttribute("id", "paiement3");
+paiementCheckboxes3.setAttribute("id", "paiement3");
 paiementChoix3.appendChild(paiementCheckboxes3);
 
 const checkboxTitle3 = document.createElement("label");
