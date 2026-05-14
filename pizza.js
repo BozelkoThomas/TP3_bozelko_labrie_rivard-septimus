@@ -418,7 +418,7 @@ methodeContainer.setAttribute("class", "prixContainer");
 prixFacture.appendChild(methodeContainer);
 
 const prixTitre = document.createElement("p");
-prixTitre.textContent = "Prix des pizzas";
+prixTitre.textContent = "Prix des pizzas et des garnitures";
 prixContainer.appendChild(prixTitre);
 
 const prixPrix = document.createElement("p");
@@ -501,4 +501,18 @@ function commanderPizzas() {
         methode.textContent = "espèces (à la porte)";
 
     }
+
+    // Prix
+    let prixPourGarnitures = document.querySelectorAll('input[type="checkbox"]:checked').length;
+    let prixPourPizzas = ((qtyPizza1*prixParPizzas) + (qtyPizza2*prixParPizzas) + (qtyPizza3*prixParPizzas) + (qtyPizza4*prixParPizzas) + prixPourGarnitures).toFixed(2);
+    let prixTps = (prixPourPizzas * tps).toFixed(2);
+    let prixTvq = (prixPourPizzas * tvq).toFixed(2);
+    let prixPourCommande = parseFloat(prixPourPizzas + prixTps + prixTvq).toFixed(2);
+
+    document.getElementById("prixPizzas").textContent = prixPourPizzas + "$";
+    document.getElementById("prixTps").textContent = prixTps + "$";
+    document.getElementById("prixTvq").textContent = prixTvq + "$";
+    document.getElementById("prixTotal").textContent =  prixPourCommande + "$";
+
+
 }
