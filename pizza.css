@@ -195,7 +195,6 @@ h2 {
     gap: 10px;
 
     button, input {
-        flex: 1;
         background-color: rgba(255, 255, 255, 0.50);
         border: 3px solid rgba(255, 255, 255, 0.50);
         color: white;
@@ -204,4 +203,13 @@ h2 {
         text-align: center;
         font-size: 16px;
     }
+
+    button {
+        width: 50px;
+    }
+
+    input {
+        width: 100%;
+    }
+
 }
