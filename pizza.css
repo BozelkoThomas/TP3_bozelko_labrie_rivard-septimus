@@ -93,6 +93,18 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 600px;
+    padding: 30px;
+}
+
+#facture-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
 }
 
 #button {
@@ -102,4 +114,30 @@ h2 {
     border: 3px solid white;
     background-color: var(--color-secondary);
     color: white;
+}
+
+#facture-client, #facture-commande, #facture-paiement {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid white;
+    padding-bottom: 10px;
+}
+
+#pizzasContainer, #clientContainer {
+    display: flex;
+    gap: 15px;
+}
+
+#pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+#commande-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(69, 111, 111);
 }

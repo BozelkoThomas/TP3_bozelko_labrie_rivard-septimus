@@ -375,6 +375,9 @@ prixFacture.appendChild(tvqContainer);
 const totalContainer = document.createElement("div");
 totalContainer.setAttribute("class", "prixContainer");
 prixFacture.appendChild(totalContainer);
+const methodeContainer = document.createElement("div");
+methodeContainer.setAttribute("class", "prixContainer");
+prixFacture.appendChild(methodeContainer);
 
 const prixTitre = document.createElement("p");
 prixTitre.textContent = "Prix des pizzas";
@@ -407,6 +410,14 @@ totalContainer.appendChild(totalTitre);
 const totalPrix = document.createElement("p");
 totalPrix.setAttribute("id", "prixTotal");
 totalContainer.appendChild(totalPrix);
+
+const methodeTitre = document.createElement("p");
+methodeTitre.textContent = "Méthode de paiement";
+methodeContainer.appendChild(methodeTitre);
+
+const methode = document.createElement("p");
+methode.setAttribute("id", "methodePaiement");
+methodeContainer.appendChild(methode);
 
 // Boutton
 const zoneButton = document.getElementById("commander");
