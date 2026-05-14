@@ -57,22 +57,29 @@ while (i < nomsPizzas.length) {
 
     const btnMoinsPizza = document.createElement("button");
     btnMoinsPizza.setAttribute("id", "btnMoinsPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) + "()");
+    btnMoinsPizza.setAttribute("onclick", "moinsPizza" + (i + 1) + "()");
     btnMoinsPizza.textContent = "-";
     conteneurQtyPizza.appendChild(btnMoinsPizza);
 
     const qtyPizza = document.createElement("input");
     qtyPizza.setAttribute("id", "qtyPizza" + (i + 1));
+    qtyPizza.setAttribute("type", "number" + (i + 1));
     qtyPizza.setAttribute("value", 0);
     conteneurQtyPizza.appendChild(qtyPizza);
 
     const btnPlusPizza = document.createElement("button");
     btnPlusPizza.setAttribute("id", "btnPlusPizza" + (i + 1));
+    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) + "()");
     btnPlusPizza.textContent = "+";
     conteneurQtyPizza.appendChild(btnPlusPizza);
 
     i++;
     n = 0;
+}
+
+function moinsPizza1() {
+    qtyPizza1--;
+    document.getElementById("qtyPizza1").innerHTML = qtyPizza1;
 }
 
 
@@ -184,7 +191,6 @@ inputCourrielClient.setAttribute("placeholder", "Adresse courriel");
 inputCourrielClient.setAttribute("id", "courrielClient");
 
 client.appendChild(inputCourrielClient);
-client.appendChild(document.createElement("br"));
 
 
 // Sélection du div livraison
