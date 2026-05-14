@@ -56,7 +56,7 @@ while (i < nomsPizzas.length) {
 
     const btnMoinsPizza = document.createElement("button");
     btnMoinsPizza.setAttribute("id", "btnMoinsPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "moinsPizza()" + (i + 1) + "()");
+    btnMoinsPizza.setAttribute("onclick", "moinsPizza" + (i + 1) + "()");
     btnMoinsPizza.textContent = "-";
     conteneurQtyPizza.appendChild(btnMoinsPizza);
 
@@ -70,17 +70,12 @@ while (i < nomsPizzas.length) {
 
     const btnPlusPizza = document.createElement("button");
     btnPlusPizza.setAttribute("id", "btnPlusPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "plusPizza()" + (i + 1) + "()");
+    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) + "()");
     btnPlusPizza.textContent = "+";
     conteneurQtyPizza.appendChild(btnPlusPizza);
 
     i++;
     n = 0;
-}
-
-function moinsPizza1() {
-    qtyPizza1--;
-    document.getElementById("qtyPizza1").innerHTML = qtyPizza1;
 }
 
 // Prix des pizzas
@@ -429,7 +424,7 @@ zoneButton.appendChild(button);
 // Footer
 const footer = document.getElementById("facture-footer");
 const titreFooter = document.createElement("h2");
-titreFooter.textContent = "Merci de nous avoir choisi!";
+titreFooter.textContent = "Merci d'avoir commandé chez nous!";
 footer.appendChild(titreFooter);
 
 function commanderPizzas() {
