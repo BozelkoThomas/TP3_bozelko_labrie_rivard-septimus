@@ -67,6 +67,7 @@ h2 {
         border-radius: 5px;
         padding: 5px 15px;
         font-size: 16px;
+        font-family: "Kumbh Sans";
     }
 }
 
@@ -94,6 +95,8 @@ h2 {
     justify-content: center;
     width: 600px;
     padding: 30px;
+    border-radius: 50px;
+    border: 5px solid white;
 }
 
 #facture-header {
@@ -120,6 +123,7 @@ h2 {
     border: 3px solid white;
     background-color: var(--color-secondary);
     color: white;
+    font-family: "Kumbh Sans";
 }
 
 #facture-client, #facture-commande, #facture-paiement {
@@ -137,7 +141,6 @@ h2 {
 }
 
 #pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container {
-    background-color: red;
     display: flex;
     justify-content: space-between;
 }
