@@ -33,7 +33,7 @@ body {
     gap: 20px;
 }
 
-#paiement, #client, #livraison {
+#paiement, #client, #livraison, .pizzas__cards {
     background-color: var(--color-secondary);
     padding: 20px;
     border-radius: 15px;
