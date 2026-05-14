@@ -178,6 +178,30 @@ h2 {
     }
 }
 
-.qtyPizza {
-    background-color: red;
+#pizzas {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.pizzas__cards {
+    flex: 1;
+    min-width: 250px;
+}
+
+.conteneurQtyPizza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    button, input {
+        flex: 1;
+        background-color: rgba(255, 255, 255, 0.50);
+        border: 3px solid rgba(255, 255, 255, 0.50);
+        color: white;
+        font-family: "Kumbh Sans";
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+    }
 }
