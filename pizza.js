@@ -108,6 +108,7 @@ checkboxContainer.appendChild(paiementChoix3);
 // Choix 1
 const paiementCheckboxes1 = document.createElement("input");
 paiementCheckboxes1.setAttribute("type", "radio");
+paiementCheckboxes1.setAttribute("name", "radioChoix");
 paiementCheckboxes1.setAttribute("id", "paiement1");
 paiementChoix1.appendChild(paiementCheckboxes1);
 
@@ -119,6 +120,7 @@ paiementChoix1.appendChild(checkboxTitle1);
 // Choix 2
 const paiementCheckboxes2 = document.createElement("input");
 paiementCheckboxes2.setAttribute("type", "radio");
+paiementCheckboxes2.setAttribute("name", "radioChoix");
 paiementCheckboxes2.setAttribute("id", "paiement2");
 paiementChoix2.appendChild(paiementCheckboxes2);
 
@@ -130,6 +132,7 @@ paiementChoix2.appendChild(checkboxTitle2);
 // Choix 3
 const paiementCheckboxes3 = document.createElement("input");
 paiementCheckboxes3.setAttribute("type", "radio");
+paiementCheckboxes3.setAttribute("name", "radioChoix");
 paiementCheckboxes3.setAttribute("id", "paiement3");
 paiementChoix3.appendChild(paiementCheckboxes3);
 
