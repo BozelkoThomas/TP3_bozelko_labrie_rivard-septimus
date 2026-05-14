@@ -44,7 +44,7 @@ while (i < nomsPizzas.length) {
         const descChoixPizza = document.createElement("label");
         descChoixPizza.setAttribute("for", "chk" + (n + 1) + "Pizza" + (i + 1));
         descChoixPizza.textContent = choixPizzas[n];
-        conteneurChoixPizza.appendChild(descChoixPizza); 
+        conteneurChoixPizza.appendChild(descChoixPizza);
 
         n++;
     }
@@ -56,7 +56,6 @@ while (i < nomsPizzas.length) {
 
     const btnMoinsPizza = document.createElement("button");
     btnMoinsPizza.setAttribute("id", "btnMoinsPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "moinsPizza" + (i + 1) + "()");
     btnMoinsPizza.textContent = "-";
     conteneurQtyPizza.appendChild(btnMoinsPizza);
 
@@ -70,13 +69,60 @@ while (i < nomsPizzas.length) {
 
     const btnPlusPizza = document.createElement("button");
     btnPlusPizza.setAttribute("id", "btnPlusPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) + "()");
     btnPlusPizza.textContent = "+";
     conteneurQtyPizza.appendChild(btnPlusPizza);
 
     i++;
     n = 0;
 }
+
+document.getElementById("btnMoinsPizza1").addEventListener("click", () => {
+    if (qtyPizza1 > 0) {
+        qtyPizza1--;
+        document.getElementById("qtyPizza1").value = qtyPizza1;
+    }
+});
+
+document.getElementById("btnPlusPizza1").addEventListener("click", () => {
+    qtyPizza1++;
+    document.getElementById("qtyPizza1").value = qtyPizza1;
+});
+
+document.getElementById("btnMoinsPizza2").addEventListener("click", () => {
+    if (qtyPizza2 > 0) {
+        qtyPizza2--;
+        document.getElementById("qtyPizza2").value = qtyPizza2;
+    }
+});
+
+document.getElementById("btnPlusPizza2").addEventListener("click", () => {
+    qtyPizza2++;
+    document.getElementById("qtyPizza2").value = qtyPizza2;
+});
+
+document.getElementById("btnMoinsPizza3").addEventListener("click", () => {
+    if (qtyPizza3 > 0) {
+        qtyPizza3--;
+        document.getElementById("qtyPizza3").value = qtyPizza3;
+    }
+});
+
+document.getElementById("btnPlusPizza3").addEventListener("click", () => {
+    qtyPizza3++;
+    document.getElementById("qtyPizza3").value = qtyPizza3;
+});
+
+document.getElementById("btnMoinsPizza4").addEventListener("click", () => {
+    if (qtyPizza4 > 0) {
+        qtyPizza4--;
+        document.getElementById("qtyPizza4").value = qtyPizza4;
+    }
+});
+
+document.getElementById("btnPlusPizza4").addEventListener("click", () => {
+    qtyPizza4++;
+    document.getElementById("qtyPizza4").value = qtyPizza4;
+});
 
 // Prix des pizzas
 const zonePrix = document.getElementById("zone-prix");
@@ -430,12 +476,12 @@ footer.appendChild(titreFooter);
 function commanderPizzas() {
     let facture = document.getElementById("facture");
     facture.style.display = "flex";
-    
+
     const tps = 0.05;
     const tvq = 0.09975;
     const prixParPizzas = 15;
     const prixParGarnitures = 1;
-    
+
     // Client
     nomPrenom.textContent = inputNomLivraison.value;
     telephone.textContent = inputTelLivraison.value;
