@@ -108,7 +108,6 @@ checkboxContainer.appendChild(paiementChoix3);
 // Choix 1
 const paiementCheckboxes1 = document.createElement("input");
 paiementCheckboxes1.setAttribute("type", "radio");
-paiementCheckboxes1.setAttribute("name", "checkbox");
 paiementCheckboxes1.setAttribute("id", "paiement1");
 paiementChoix1.appendChild(paiementCheckboxes1);
 
@@ -120,7 +119,6 @@ paiementChoix1.appendChild(checkboxTitle1);
 // Choix 2
 const paiementCheckboxes2 = document.createElement("input");
 paiementCheckboxes2.setAttribute("type", "radio");
-paiementCheckboxes2.setAttribute("name", "checkbox");
 paiementCheckboxes2.setAttribute("id", "paiement2");
 paiementChoix2.appendChild(paiementCheckboxes2);
 
@@ -132,7 +130,6 @@ paiementChoix2.appendChild(checkboxTitle2);
 // Choix 3
 const paiementCheckboxes3 = document.createElement("input");
 paiementCheckboxes3.setAttribute("type", "radio");
-paiementCheckboxes3.setAttribute("name", "checkbox");
 paiementCheckboxes3.setAttribute("id", "paiement3");
 paiementChoix3.appendChild(paiementCheckboxes3);
 
@@ -232,6 +229,7 @@ livraison.appendChild(inputAdresseLivraison);
 // Facture (cachée)--------------------------------------------------------------------------------------------------------------------------------------------
 
 // BASE
+
 const factureHeader = document.getElementById("facture-header");
 const titreFacture = document.createElement("h2");
 titreFacture.textContent = "Pizzeria Freddy Fazbear";
@@ -268,13 +266,6 @@ const titreCommandeNom = document.createElement("h3");
 titreCommandeNom.textContent = "Détails de la commande"
 titreCommande.appendChild(titreCommandeNom);
 
-const titreCommandeQt = document.createElement("h3");
-titreCommandeQt.textContent = "Quantité"
-titreCommande.appendChild(titreCommandeQt);
-
-const titreCommandePrix = document.createElement("h3");
-titreCommandePrix.textContent = "Prix"
-titreCommande.appendChild(titreCommandePrix);
 // Freddy
 const pizza1 = document.createElement("p");
 pizza1.textContent = "Pizza Freddy"
@@ -436,8 +427,26 @@ titreFooter.textContent = "Merci de nous avoir choisi!";
 footer.appendChild(titreFooter);
 
 function commanderPizzas() {
+    let facture = document.getElementById("facture");
+    facture.style.display = "flex";
+
+    // Client
     nomPrenom.textContent = inputNomLivraison.value;
     telephone.textContent = inputTelLivraison.value;
     adresse.textContent = inputAdresseLivraison.value;
     courriel.textContent = inputCourrielClient.value;
+
+    // Paiement
+    if (document.getElementById("paiement1").checked) {
+        methode.textContent = "carte de crédit (en ligne)";
+    }
+
+    else if (document.getElementById("paiement2").checked) {
+        methode.textContent = "carte de crédit ou débit (à la porte)";
+
+    }
+    else if (document.getElementById("paiement3").checked) {
+        methode.textContent = "espèces (à la porte)";
+
+    }
 }
