@@ -214,3 +214,28 @@ h2 {
     }
 
 }
+
+#imagePizza1,#imagePizza2, #imagePizza3, #imagePizza4 {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+}
+
+#imagePizza1 {
+    background-image: url(./img/pizza_freddy.jpg);
+}
+
+#imagePizza2 {
+    background-image: url(./img/pizza_bonnie.jpg);
+}
+
+#imagePizza3 {
+    background-image: url(./img/pizza_foxy.jpg);
+}
+
+#imagePizza4 {
+    background-image: url(./img/pizza_chica.jpg);
+}
