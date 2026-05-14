@@ -9,10 +9,10 @@ header.appendChild(mainTitle);
 const nomsPizzas = ["Freddy", "Bonnie", "Chica", "Foxy"];
 const pizzas = [document.getElementById("pizza1"), document.getElementById("pizza2"), document.getElementById("pizza3"), document.getElementById("pizza4")];
 const choixPizzas = [
-    ["Choix 1a", "Choix 2a", "Choix 3a"],
-    ["Choix 1b", "Choix 2b", "Choix 3b"],
-    ["Choix 1c", "Choix 2c", "Choix 3c"],
-    ["Choix 1d", "Choix 2d", "Choix 3d"]
+    ["Fromage", "Tomates", "Olives"],
+    ["Fromage", "Tomates", "Olives"],
+    ["Fromage", "Tomates", "Olives"],
+    ["Fromage", "Tomates", "Olives"]
 ]
 let qtyPizza1 = 0;
 let qtyPizza2 = 0;
@@ -36,6 +36,7 @@ while (i < nomsPizzas.length) {
 
     while (n < (choixPizzas.length - 1)) {
         const conteneurChoixPizza = document.createElement("div");
+        conteneurChoixPizza.setAttribute("class", "conteneurChoixPizza")
         formPizza.appendChild(conteneurChoixPizza);
 
         const chkPizza = document.createElement("input");
@@ -57,7 +58,7 @@ while (i < nomsPizzas.length) {
 
     const btnMoinsPizza = document.createElement("button");
     btnMoinsPizza.setAttribute("id", "btnMoinsPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "moinsPizza" + (i + 1) + "()");
+    btnMoinsPizza.setAttribute("onclick", "moinsPizza()" + (i + 1) + "()");
     btnMoinsPizza.textContent = "-";
     conteneurQtyPizza.appendChild(btnMoinsPizza);
 
@@ -69,7 +70,7 @@ while (i < nomsPizzas.length) {
 
     const btnPlusPizza = document.createElement("button");
     btnPlusPizza.setAttribute("id", "btnPlusPizza" + (i + 1));
-    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) + "()");
+    btnMoinsPizza.setAttribute("onclick", "plusPizza()" + (i + 1) + "()");
     btnPlusPizza.textContent = "+";
     conteneurQtyPizza.appendChild(btnPlusPizza);
 
@@ -82,7 +83,11 @@ function moinsPizza1() {
     document.getElementById("qtyPizza1").innerHTML = qtyPizza1;
 }
 
-
+// Prix des pizzas
+const zonePrix = document.getElementById("zone-prix");
+const prixPizzasTitre = document.createElement("h2");
+prixPizzasTitre.textContent = "Chaque pizza coûte 15$ et les garnitures rajoutent 1$";
+zonePrix.appendChild(prixPizzasTitre);
 
 // Mode de paiement --------------------------------------------------------------------------------------------------------------------------------x
 
@@ -347,8 +352,6 @@ clientContainer.appendChild(adresse);
 
 
 // Prix
-const tps = 0.05;
-const tvq = 0.09975;
 const prixFacture = document.getElementById("facture-paiement");
 const titrePrix = document.createElement("h3");
 titrePrix.textContent = "Paiement";
@@ -432,7 +435,12 @@ footer.appendChild(titreFooter);
 function commanderPizzas() {
     let facture = document.getElementById("facture");
     facture.style.display = "flex";
-
+    
+    const tps = 0.05;
+    const tvq = 0.09975;
+    const prixParPizzas = 15;
+    const prixParGarnitures = 1;
+    
     // Client
     nomPrenom.textContent = inputNomLivraison.value;
     telephone.textContent = inputTelLivraison.value;
