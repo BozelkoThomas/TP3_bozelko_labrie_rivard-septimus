@@ -1,3 +1,10 @@
+// Title 
+const header = document.getElementById("header");
+const mainTitle = document.createElement("h1");
+mainTitle.textContent = "Pizzeria Freddy Fazbear";
+header.appendChild(mainTitle);
+
+
 // Pizzas
 const nomsPizzas = ["Freddy", "Bonnie", "Chica", "Foxy"];
 const pizzas = [document.getElementById("pizza1"), document.getElementById("pizza2"), document.getElementById("pizza3"), document.getElementById("pizza4")];
