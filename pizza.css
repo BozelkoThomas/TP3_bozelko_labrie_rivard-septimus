@@ -88,11 +88,11 @@ h2 {
 }
 
 #facture {
-    position: absolute;
     background-color: var(--color-secondary);
-    height: 100vh;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #button {
