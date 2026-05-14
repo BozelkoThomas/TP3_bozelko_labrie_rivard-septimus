@@ -14,6 +14,10 @@ const choixPizzas = [
     ["Choix 1c", "Choix 2c", "Choix 3c"],
     ["Choix 1d", "Choix 2d", "Choix 3d"]
 ]
+let qtyPizza1 = 0;
+let qtyPizza2 = 0;
+let qtyPizza3 = 0;
+let qtyPizza4 = 0;
 
 let i = 0;
 let n = 0;
@@ -27,7 +31,7 @@ while (i < nomsPizzas.length) {
     titrePizza.textContent = "La pizza de " + nomsPizzas[i];
     pizzas[i].appendChild(titrePizza);
 
-    const formPizza = document.createElement("form");
+    const formPizza = document.createElement("div");
     pizzas[i].appendChild(formPizza);
 
     while (n < (choixPizzas.length - 1)) {
@@ -53,12 +57,13 @@ while (i < nomsPizzas.length) {
 
     const btnMoinsPizza = document.createElement("button");
     btnMoinsPizza.setAttribute("id", "btnMoinsPizza" + (i + 1));
+    btnMoinsPizza.setAttribute("onclick", "plusPizza" + (i + 1) +);
     btnMoinsPizza.textContent = "-";
     conteneurQtyPizza.appendChild(btnMoinsPizza);
 
     const qtyPizza = document.createElement("input");
     qtyPizza.setAttribute("id", "qtyPizza" + (i + 1));
-    qtyPizza.setAttribute("value", "0");
+    qtyPizza.setAttribute("value", 0);
     conteneurQtyPizza.appendChild(qtyPizza);
 
     const btnPlusPizza = document.createElement("button");
@@ -70,6 +75,8 @@ while (i < nomsPizzas.length) {
     n = 0;
 }
 
+
+
 // Mode de paiement --------------------------------------------------------------------------------------------------------------------------------x
 
 // BASE
@@ -80,6 +87,7 @@ paiement.appendChild(titrePaiement);
 
 // Container de tous les choix
 const checkboxContainer = document.createElement("div");
+checkboxContainer.setAttribute("id", "choixContainer")
 paiement.appendChild(checkboxContainer);
 
 // Container pour chaque choix
