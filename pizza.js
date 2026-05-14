@@ -51,6 +51,7 @@ while (i < nomsPizzas.length) {
 
     const conteneurQtyPizza = document.createElement("div");
     conteneurQtyPizza.setAttribute("id", "conteneurQtyPizza" + (i + 1));
+    conteneurQtyPizza.setAttribute("class", "conteneurQtyPizza");
     formPizza.appendChild(conteneurQtyPizza);
 
     const btnMoinsPizza = document.createElement("button");
