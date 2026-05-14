@@ -13,7 +13,7 @@ const choixPizzas = [
     ["Choix 1b", "Choix 2b", "Choix 3b"],
     ["Choix 1c", "Choix 2c", "Choix 3c"],
     ["Choix 1d", "Choix 2d", "Choix 3d"]
-]rdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdzdz
+]
 
 let i = 0;
 let n = 0;
