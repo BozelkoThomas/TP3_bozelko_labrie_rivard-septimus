@@ -84,8 +84,10 @@ document.getElementById("btnMoinsPizza1").addEventListener("click", () => {
 });
 
 document.getElementById("btnPlusPizza1").addEventListener("click", () => {
-    qtyPizza1++;
-    document.getElementById("qtyPizza1").value = qtyPizza1;
+    if (qtyPizza1 < 50) {
+        qtyPizza1++;
+        document.getElementById("qtyPizza1").value = qtyPizza1;
+    }
 });
 
 document.getElementById("btnMoinsPizza2").addEventListener("click", () => {
@@ -96,8 +98,10 @@ document.getElementById("btnMoinsPizza2").addEventListener("click", () => {
 });
 
 document.getElementById("btnPlusPizza2").addEventListener("click", () => {
-    qtyPizza2++;
-    document.getElementById("qtyPizza2").value = qtyPizza2;
+    if (qtyPizza2 < 50) {
+        qtyPizza2++;
+        document.getElementById("qtyPizza2").value = qtyPizza2;
+    }
 });
 
 document.getElementById("btnMoinsPizza3").addEventListener("click", () => {
@@ -108,8 +112,10 @@ document.getElementById("btnMoinsPizza3").addEventListener("click", () => {
 });
 
 document.getElementById("btnPlusPizza3").addEventListener("click", () => {
-    qtyPizza3++;
-    document.getElementById("qtyPizza3").value = qtyPizza3;
+    if (qtyPizza3 < 50) {
+        qtyPizza3++;
+        document.getElementById("qtyPizza3").value = qtyPizza3;
+    }
 });
 
 document.getElementById("btnMoinsPizza4").addEventListener("click", () => {
@@ -120,8 +126,10 @@ document.getElementById("btnMoinsPizza4").addEventListener("click", () => {
 });
 
 document.getElementById("btnPlusPizza4").addEventListener("click", () => {
-    qtyPizza4++;
-    document.getElementById("qtyPizza4").value = qtyPizza4;
+    if (qtyPizza4 < 50) {
+        qtyPizza4++;
+        document.getElementById("qtyPizza4").value = qtyPizza4;
+    }
 });
 
 // Prix des pizzas
@@ -475,59 +483,59 @@ footer.appendChild(titreFooter);
 
 function commanderPizzas() {
     // Vérifications 
-    if  (inputNomClient.value === "" || inputPrenomClient.value === "" || inputCourrielClient.value === "" || inputCourrielClient.value === "" || inputNomLivraison.value === "" || inputTelLivraison.value === "" || inputAdresseLivraison.value === "") {
+    if (inputNomClient.value === "" || inputPrenomClient.value === "" || inputCourrielClient.value === "" || inputCourrielClient.value === "" || inputNomLivraison.value === "" || inputTelLivraison.value === "" || inputAdresseLivraison.value === "") {
         alert("Veuillez remplir les informations requises");
     }
     else {
-        
-    let facture = document.getElementById("facture");
-    facture.style.display = "flex";
 
-    const tps = 0.05;
-    const tvq = 0.09975;
-    const prixParPizzas = 15;
+        let facture = document.getElementById("facture");
+        facture.style.display = "flex";
+
+        const tps = 0.05;
+        const tvq = 0.09975;
+        const prixParPizzas = 15;
 
 
-    // Client
-    nomPrenom.textContent = inputNomLivraison.value;
-    telephone.textContent = inputTelLivraison.value;
-    adresse.textContent = inputAdresseLivraison.value;
-    courriel.textContent = inputCourrielClient.value;
+        // Client
+        nomPrenom.textContent = inputNomLivraison.value;
+        telephone.textContent = inputTelLivraison.value;
+        adresse.textContent = inputAdresseLivraison.value;
+        courriel.textContent = inputCourrielClient.value;
 
-    // Paiement
-    if (document.getElementById("paiement1").checked) {
-        methode.textContent = "carte de crédit (en ligne)";
-    }
+        // Paiement
+        if (document.getElementById("paiement1").checked) {
+            methode.textContent = "carte de crédit (en ligne)";
+        }
 
-    else if (document.getElementById("paiement2").checked) {
-        methode.textContent = "carte de crédit ou débit (à la porte)";
+        else if (document.getElementById("paiement2").checked) {
+            methode.textContent = "carte de crédit ou débit (à la porte)";
 
-    }
-    else if (document.getElementById("paiement3").checked) {
-        methode.textContent = "espèces (à la porte)";
+        }
+        else if (document.getElementById("paiement3").checked) {
+            methode.textContent = "espèces (à la porte)";
 
-    }
-    else {
-        alert("Veuillez choisir un mode de paiement.");
-        facture.style.display = "none";
-    }
+        }
+        else {
+            alert("Veuillez choisir un mode de paiement.");
+            facture.style.display = "none";
+        }
 
-    // Prix
-    let prixPourGarnitures = document.querySelectorAll('input[type="checkbox"]:checked').length;
-    let prixPourPizzas = ((qtyPizza1*prixParPizzas) + (qtyPizza2*prixParPizzas) + (qtyPizza3*prixParPizzas) + (qtyPizza4*prixParPizzas) + prixPourGarnitures).toFixed(2);
-    let prixTps = (prixPourPizzas * tps).toFixed(2);
-    let prixTvq = (prixPourPizzas * tvq).toFixed(2);
-    let prixPourCommande = (((qtyPizza1*prixParPizzas) + (qtyPizza2*prixParPizzas) + (qtyPizza3*prixParPizzas) + (qtyPizza4*prixParPizzas) + prixPourGarnitures) + (prixPourPizzas * tps) + (prixPourPizzas * tvq)).toFixed(2);
+        // Prix
+        let prixPourGarnitures = document.querySelectorAll('input[type="checkbox"]:checked').length;
+        let prixPourPizzas = ((qtyPizza1 * prixParPizzas) + (qtyPizza2 * prixParPizzas) + (qtyPizza3 * prixParPizzas) + (qtyPizza4 * prixParPizzas) + prixPourGarnitures).toFixed(2);
+        let prixTps = (prixPourPizzas * tps).toFixed(2);
+        let prixTvq = (prixPourPizzas * tvq).toFixed(2);
+        let prixPourCommande = (((qtyPizza1 * prixParPizzas) + (qtyPizza2 * prixParPizzas) + (qtyPizza3 * prixParPizzas) + (qtyPizza4 * prixParPizzas) + prixPourGarnitures) + (prixPourPizzas * tps) + (prixPourPizzas * tvq)).toFixed(2);
 
-    if (prixPourPizzas == 0) {
-        alert("Veuillez choisir au moins une pizza")
-        facture.style.display = "none";
-    }
-    
-    document.getElementById("prixPizzas").textContent = prixPourPizzas + "$";
-    document.getElementById("prixTps").textContent = prixTps + "$";
-    document.getElementById("prixTvq").textContent = prixTvq + "$";
-    document.getElementById("prixTotal").textContent =  prixPourCommande + "$";
+        if (prixPourPizzas == 0) {
+            alert("Veuillez choisir au moins une pizza")
+            facture.style.display = "none";
+        }
+
+        document.getElementById("prixPizzas").textContent = prixPourPizzas + "$";
+        document.getElementById("prixTps").textContent = prixTps + "$";
+        document.getElementById("prixTvq").textContent = prixTvq + "$";
+        document.getElementById("prixTotal").textContent = prixPourCommande + "$";
 
     }
 }
