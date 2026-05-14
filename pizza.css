@@ -171,3 +171,9 @@ h2 {
     gap: 10px;
     margin-bottom: 10px;
 }
+
+#zone-prix {
+    h2{
+        font-size: 30px;
+    }
+}
