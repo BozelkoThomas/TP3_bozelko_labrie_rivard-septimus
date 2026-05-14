@@ -474,13 +474,19 @@ titreFooter.textContent = "Merci d'avoir commandé chez nous!";
 footer.appendChild(titreFooter);
 
 function commanderPizzas() {
+    // Vérifications 
+    if  (inputNomClient.value === "" || inputPrenomClient.value === "" || inputCourrielClient.value === "" || inputCourrielClient.value === "" || inputNomLivraison.value === "" || inputTelLivraison.value === "" || inputAdresseLivraison.value === "") {
+        alert("Veuillez remplir les informations requises.")
+    }
+    else {
+        
     let facture = document.getElementById("facture");
     facture.style.display = "flex";
 
     const tps = 0.05;
     const tvq = 0.09975;
     const prixParPizzas = 15;
-    const prixParGarnitures = 1;
+
 
     // Client
     nomPrenom.textContent = inputNomLivraison.value;
@@ -501,6 +507,10 @@ function commanderPizzas() {
         methode.textContent = "espèces (à la porte)";
 
     }
+    else {
+        alert("Veuillez choisir un mode de paiement.");
+        facture.style.display = "none";
+    }
 
     // Prix
     let prixPourGarnitures = document.querySelectorAll('input[type="checkbox"]:checked').length;
@@ -514,5 +524,5 @@ function commanderPizzas() {
     document.getElementById("prixTvq").textContent = prixTvq + "$";
     document.getElementById("prixTotal").textContent =  prixPourCommande + "$";
 
-
+    }
 }
