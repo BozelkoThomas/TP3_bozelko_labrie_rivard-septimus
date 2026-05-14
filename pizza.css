@@ -32,6 +32,10 @@ h2 {
     font-size: 20px;
 }
 
+#pizza1 {
+    display: flex;
+}
+
 #zone-paiement {
     display: flex;
     align-items: center;
