@@ -418,7 +418,7 @@ methodeContainer.setAttribute("class", "prixContainer");
 prixFacture.appendChild(methodeContainer);
 
 const prixTitre = document.createElement("p");
-prixTitre.textContent = "Prix des pizzas";
+prixTitre.textContent = "Prix des pizzas et des garnitures";
 prixContainer.appendChild(prixTitre);
 
 const prixPrix = document.createElement("p");
@@ -474,13 +474,19 @@ titreFooter.textContent = "Merci d'avoir commandé chez nous!";
 footer.appendChild(titreFooter);
 
 function commanderPizzas() {
+    // Vérifications 
+    if  (inputNomClient.value === "" || inputPrenomClient.value === "" || inputCourrielClient.value === "" || inputCourrielClient.value === "" || inputNomLivraison.value === "" || inputTelLivraison.value === "" || inputAdresseLivraison.value === "") {
+        alert("Veuillez remplir les informations requises.")
+    }
+    else {
+        
     let facture = document.getElementById("facture");
     facture.style.display = "flex";
 
     const tps = 0.05;
     const tvq = 0.09975;
     const prixParPizzas = 15;
-    const prixParGarnitures = 1;
+
 
     // Client
     nomPrenom.textContent = inputNomLivraison.value;
@@ -499,6 +505,24 @@ function commanderPizzas() {
     }
     else if (document.getElementById("paiement3").checked) {
         methode.textContent = "espèces (à la porte)";
+
+    }
+    else {
+        alert("Veuillez choisir un mode de paiement.");
+        facture.style.display = "none";
+    }
+
+    // Prix
+    let prixPourGarnitures = document.querySelectorAll('input[type="checkbox"]:checked').length;
+    let prixPourPizzas = ((qtyPizza1*prixParPizzas) + (qtyPizza2*prixParPizzas) + (qtyPizza3*prixParPizzas) + (qtyPizza4*prixParPizzas) + prixPourGarnitures).toFixed(2);
+    let prixTps = (prixPourPizzas * tps).toFixed(2);
+    let prixTvq = (prixPourPizzas * tvq).toFixed(2);
+    let prixPourCommande = parseFloat(prixPourPizzas + prixTps + prixTvq).toFixed(2);
+
+    document.getElementById("prixPizzas").textContent = prixPourPizzas + "$";
+    document.getElementById("prixTps").textContent = prixTps + "$";
+    document.getElementById("prixTvq").textContent = prixTvq + "$";
+    document.getElementById("prixTotal").textContent =  prixPourCommande + "$";
 
     }
 }
