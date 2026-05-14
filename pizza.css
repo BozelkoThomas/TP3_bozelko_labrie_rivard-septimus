@@ -34,6 +34,7 @@ h2 {
 
 #zone-paiement {
     display: flex;
+    align-items: center;
 }
 
 #commande-header, #pizza1Container, #pizza2Container, #pizza3Container, #pizza4Container, .prixContainer, #pizzas{
@@ -53,6 +54,27 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#client, #livraison {
+    input {
+        background-color: rgba(255, 255, 255, 0.50);
+        border: 3px solid rgba(255, 255, 255, 0.50);
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-size: 16px;
+    }
+}
+
+#choixContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    div {
+        display: flex;
+        gap: 10px;
+    }
 }
 
 #clientContainer, #pizzasContainer {
