@@ -48,6 +48,7 @@ h2 {
 #paiement, #client, #livraison, .pizzas__cards {
     background-color: var(--color-secondary);
     padding: 20px;
+    gap: 10px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
